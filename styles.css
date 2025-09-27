@@ -1,0 +1,137 @@
+/* Root & Reset */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --clr-primary:#e3941d;
+  --clr-accent:#f00707;
+  --clr-light:rgba(255,255,255,.15);
+  --clr-dark:rgba(0,0,0,.2);
+  --clr-text:#1e293b;
+  --clr-text-light:#0f1114;
+  --radius:.8rem;
+  --shadow:0 8px 24px rgba(0,0,0,.2);
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#e6b3d969,#e7e37ecf);
+  min-height:100vh;
+  color:#271f1f;
+  transition:background .4s,color .4s;
+}
+
+.dark{
+    color: #d8e3d3;
+    background: linear-gradient(135deg, #0b0a0b 0%, #000000 100%);
+}
+
+/* Container */
+.container{width:90%;max-width:1200px;margin:auto}
+
+/* Header */
+.header{padding:1rem 0;display:flex;justify-content:space-between;align-items:center;}
+.logo-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--clr-primary),var(--clr-accent));border-radius:.5rem;}
+.logo-text{font-size:1.5rem;font-weight:700;color:#ea2121;}
+.theme-toggle{background:var(--clr-light);border-radius:15px;padding:.2rem .5rem;cursor:pointer;color:#0b0404fb;display:flex;gap:.5rem;transition:0.3s;  position: absolute; top:1rem; right:1rem;}
+.theme-toggle:hover{transform:scale(1.05);}
+
+/* Search */
+.search-section{margin:1rem 0;text-align:center;}
+.search-input-container{position:relative;display:inline-block;width:300px;}
+.search-input{
+  width:100%;padding:.9rem 5.5rem .9rem 5.5rem;border-radius:var(--radius);border:none;background:rgba(255,255,255,0.2);color:#151414;transition:0.3s;
+}
+.search-input:focus{background:rgba(255,255,255,0.3);}
+.search-button{position:absolute;right:.2rem;top:50%;transform:translateY(-50%);border:none;background:linear-gradient(135deg,var(--clr-primary),var(--clr-accent));color:#fff;padding:.5rem .7rem;border-radius:.5rem;cursor:pointer;transition:0.3s;}
+.search-button:hover{opacity:0.9;}
+.search-icon{position:absolute;left:.5rem;top:50%;transform:translateY(-50%);color:#d19268;opacity:.9;}
+
+/* Loader */
+.loading-container{margin:2rem auto;text-align:center;}
+.loading-spinner{width:50px;height:50px;border:5px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;margin:auto;animation:spin 1s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* Weather Cards */
+.current-weather-card{
+  margin:2rem auto;
+  padding:1.5rem;
+  background:rgba(243, 4, 4, 0.289);
+  backdrop-filter:blur(10px);
+  border-radius:var(--radius);
+  text-align:center;
+  box-shadow:var(--shadow);
+  transition:0.3s;
+}
+.current-weather-card:hover{transform:scale(1.02);}
+
+/* Weather Details Cards */
+.weather-details-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:1rem;
+  margin-top:1rem;
+}
+.weather-detail-card{
+  background:rgba(182, 68, 68, 0.356);
+  padding:1rem;
+  border-radius:var(--radius);
+  text-align:center;
+  box-shadow:var(--shadow);
+  transition:0.3s;
+}
+.weather-detail-card:hover{transform:scale(1.05);}
+.weather-detail-card i{font-size:1.8rem;margin-bottom:.3rem;color:#fff;}
+
+/* Map */
+.map-container{margin-top:1rem;border-radius:12px;overflow:hidden;transition:0.3s;border:2px solid #f07b00;}
+.map-container iframe{border:none;width:100%;height:300px;border-radius:12px;}
+
+/* Forecast */
+.forecast-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:1rem;
+  margin-top:1rem;
+}
+.forecast-grid .card{
+  background:rgba(121, 198, 208, 0.248);
+  padding:1rem;
+  border-radius:var(--radius);
+  text-align:center;
+  box-shadow:var(--shadow);
+  transition:0.3s;
+}
+.forecast-grid .card:hover{transform:scale(1.05);}
+
+/* Welcome */
+.welcome-message{text-align:center;margin-top:3rem;}
+.welcome-card {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.welcome-card:hover{transform: translateY(-5px);}
+.welcome-icon{font-size:3rem;margin-bottom:1rem;}
+.welcome-title{font-size:1.5rem;margin-bottom:0.5rem;}
+.welcome-text{font-size:1rem;margin-bottom:1rem;}
+.use-location-btn{
+  margin-top:1rem;padding:.6rem 1.2rem;
+  border:none;border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--clr-primary),var(--clr-accent));
+  cursor:pointer;color:#fff;
+  transition:0.3s;
+}
+.use-location-btn:hover{opacity:0.9;}
+.hidden{display:none;}
+
+
+
+
+
+
+
+
+

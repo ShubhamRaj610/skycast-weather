@@ -19,5 +19,5 @@ Fetches real-time data from [WeatherAPI](https://api.openweathermap.org) and sup
 
 🌐 Live Demo
 
-Deployed here: https://your-username.github.io/skycast
+Deployed here: https://shubhamraj610.github.io/skycast-weather/
 
